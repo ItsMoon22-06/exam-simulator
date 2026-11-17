@@ -1,0 +1,14 @@
+# Blueprint opcional de Render: un solo servicio que sirve API + React
+services:
+  - type: web
+    name: exam-simulator
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false   # pega aquí la cadena de conexión de Neon
+      - key: NODE_VERSION
+        value: 22

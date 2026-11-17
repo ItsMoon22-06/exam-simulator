@@ -1,0 +1,15 @@
+{
+  "name": "exam-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simulador de exámenes con estadísticas - React + Express + Neon (PostgreSQL)",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "build": "npm --prefix backend install && npm --prefix frontend install && npm --prefix frontend run build",
+    "start": "node backend/src/index.js",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "db:init": "npm --prefix backend run db:init"
+  },
+  "engines": { "node": ">=18" }
+}
